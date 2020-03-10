@@ -1,12 +1,3 @@
-"""
-Copyright Kinvert All Rights Reserved
-If you would like to use this code for
-business or education please contact
-us for permission at:
-www.kinvert.com/
-Free for personal use
-"""
-
 import anki_vector
 from anki_vector.util import degrees, distance_mm, speed_mmps
 import time
@@ -30,9 +21,9 @@ def main():
         print("Connecting to a cube...")
         robot.world.connect_cube()
 
-        robot.behavior.say_text("I am still learning this game so I might make mistakes")
+        robot.behavior.say_text("I am looking for my cube and trying to fetch it")
 
-        for i in range(5):
+        for i in range(2):
             dock_response = False
             docking_result = None
             while not robot.touch.last_sensor_reading.is_being_touched:
@@ -49,7 +40,7 @@ def main():
                 docking_result = dock_response.result
                 robot.motors.set_lift_motor(50)
                 time.sleep(1)
-                robot.behavior.turn_in_place(degrees(180))
+                robot.behavior.turn_in_place(degrees(90))
                 robot.behavior.drive_straight(distance_mm(100), speed_mmps(100))
                 while not robot.touch.last_sensor_reading.is_being_touched:
                     robot.motors.set_wheel_motors(-50, 50)
