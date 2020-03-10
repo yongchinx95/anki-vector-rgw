@@ -4,10 +4,10 @@ in the Scripts folder there are scripts that can be found for different use case
 
 ## Table of contents
 * [Team](#Team)
-* [Step installation and connexion](#Step connexion and setting)
-  * [Mac OS / OSX](#Install macOS)
+* [Step installation and connexion](#Step_connexion_and_setting)
+  * [Mac OS / OSX](#Install_macOS)
   * [Source](#Source)
-* [Script audio](#Script audio)
+* [Script audio](#Script_audio)
 
 
 ## Team
@@ -15,9 +15,9 @@ in the Scripts folder there are scripts that can be found for different use case
 - [Yong Chin Zhuang](https://github.com/yongchin95)
 - [Kevin]()
 
-## Step connexion and setting
+## Step_connexion_and_setting
 
-### Install macOS 
+### Install_macOS 
 Install Homebrew: brew update
 Install the latest version on Python 3: brew install python 3
 Install SDK: python3 -m pip install --user anki_vector
@@ -27,6 +27,6 @@ Configure anki vector: python3 -m anki_vector.configure
 [installation](https://developer.anki.com/vector/docs/install-macos.html) 
 [getting started](https://developer.anki.com/vector/docs/getstarted.html)
 
-### Script audio
+### Script_audio
 
 the format audio file must be .wav, 16 bit and 8000Hz with 1 channel 
