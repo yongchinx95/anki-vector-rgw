@@ -26,7 +26,9 @@ def main():
         robot.behavior.set_head_angle(degrees(45.0))
         robot.behavior.set_lift_height(0.0)
         x = 1
-        for i in range(41):
+        robot.audio.stream_wav_file("../resources/music/movie.wav", 75)
+
+        for i in range(180):
             current_directory = os.path.dirname(os.path.realpath(__file__))
             image_path = os.path.join(current_directory, "..", "face_images", "movie", "movie" + str(x) + ".jpg")
 
@@ -37,9 +39,8 @@ def main():
             print("Display image on Vector's face...")
             screen_data = anki_vector.screen.convert_image_to_screen_data(image_file)
 
-            duration_s = 0.2
+            duration_s = 0.02
             robot.screen.set_screen_with_image_data(screen_data, duration_s)
-            # time.sleep(duration_s)
             x += 1
 
 
