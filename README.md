@@ -18,19 +18,19 @@ in the Scripts folder there are scripts that can be found for different use case
 ## Step_connexion_and_setting
 
 ### Install_macOS 
-Install Homebrew: brew update
-Install the latest version on Python 3: brew install python 3
-Install SDK: python3 -m pip install --user anki_vector
-Upgrade SDK: python3 -m pip install --user --upgrade anki_vector
+Install Homebrew: brew update   
+Install the latest version on Python 3: brew install python 3   
+Install SDK: python3 -m pip install --user anki_vector   
+Upgrade SDK: python3 -m pip install --user --upgrade anki_vector   
 Configure anki vector: python3 -m anki_vector.configure
 ### Source
-[installation](https://developer.anki.com/vector/docs/install-macos.html)
+[installation](https://developer.anki.com/vector/docs/install-macos.html)  
 [getting started](https://developer.anki.com/vector/docs/getstarted.html)
 
 ### Script_audio
 
-the format audio file must be dowlaoad in
-*.wav
-*16 bit
-*8000Hz
-*1 channel 
+the format audio file must be dowlaoad in 
+*.wav   
+*16 bit  
+*8000Hz   
+*1 channel    
