@@ -47,13 +47,13 @@ def impact(bx, by, bvx, bvy, paddleY):
 args = anki_vector.util.parse_command_args()
 with anki_vector.Robot(args.serial) as robot:
     robot.behavior.set_head_angle(degrees(45.0))
-    robot.say_text("Don't touch me yet")
+    robot.behavior.say_text("Don't touch me yet")
     untouchTotal = 0
     for i in range(20):
         untouchTotal += robot.touch.last_sensor_reading.raw_touch_value
     untouched = untouchTotal / 20.0
     time.sleep(1.0)
-    robot.say_text("touch my whole back")
+    robot.behavior.say_text("touch my whole back")
     while not robot.touch.last_sensor_reading.is_being_touched:
         time.sleep(0.1)
     time.sleep(1.0)
@@ -62,7 +62,7 @@ with anki_vector.Robot(args.serial) as robot:
         touchTotal += robot.touch.last_sensor_reading.raw_touch_value
     touched = touchTotal / 20.0
     diff = touched - untouched
-    robot.say_text("OK you can stop. Get ready. You are blue.")
+    robot.behavior.say_text("OK you can stop. Get ready. You are blue.")
 
     over = 0
     bx = 90
@@ -85,10 +85,10 @@ with anki_vector.Robot(args.serial) as robot:
         bx += bvx
         by += bvy
         if bx < 0:
-            robot.say_text("I win")
+            robot.behavior.say_text("I win")
             over = 1
         elif bx > 183:
-            robot.say_text("You win")
+            robot.behavior.say_text("You win")
             over = 1
 
         face_image = draw_face(0, 0, bx, by, px, py, vx, vy)
