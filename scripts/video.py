@@ -8,6 +8,7 @@ Created on Fri Mar  6 13:21:29 2020
 import os
 import sys
 import time
+import asyncio
 
 try:
     from PIL import Image
@@ -45,4 +46,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run (main())
