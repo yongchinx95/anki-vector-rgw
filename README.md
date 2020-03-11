@@ -24,13 +24,23 @@ Install SDK: python3 -m pip install --user anki_vector
 Upgrade SDK: python3 -m pip install --user --upgrade anki_vector   
 Configure anki vector: python3 -m anki_vector.configure
 ### Source
-[installation](https://developer.anki.com/vector/docs/install-macos.html)  
+[installation](https://developer.anki.com/vector/docs/install-macos.html)   
 [getting started](https://developer.anki.com/vector/docs/getstarted.html)
 
 ### Script_audio
 
-the format audio file must be dowlaoad in 
+the format audio file must be dowlaoad in   
 *.wav   
 *16 bit  
 *8000Hz   
 *1 channel    
+
+## Rocket.chat API
+
+*pip install rocket-python  
+
+####
+
+code: from rocketchat.api import RocketChatAPI   
+      api = RocketChatAPI(settings={'username': '...', 'password': '...',
+                              'domain': 'https://...'})
