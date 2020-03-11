@@ -8,7 +8,7 @@ in the Scripts folder there are scripts that can be found for different use case
   * [Mac OS / OSX](#Install_macOS)
   * [Source](#Source)
 * [Script audio](#Script_audio)   
-* [Rocket.chat API](#Rocket.chat_API)
+* [Rocket.chat API](#Rocket_chat_API)
 
 
 ## Team
@@ -36,7 +36,7 @@ the format audio file must be dowlaoad in
 *8000Hz   
 *1 channel    
 
-## Rocket.chat_API
+## Rocket_chat_API
 
 *pip install rocket-python  
 *code:   
