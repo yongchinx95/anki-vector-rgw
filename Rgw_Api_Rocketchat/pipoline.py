@@ -21,3 +21,24 @@ from rocketchat.calls.im.close_room import CloseImRoom
 from rocketchat.calls.im.get_rooms import GetImRooms
 from rocketchat.calls.im.get_history import GetImRoomHistory
 from datetime import datetime
+import anki_vector
+from pprint import pprint
+from rocketchat.api import RocketChatAPI
+from rocketchat_API.rocketchat import RocketChat
+
+class RocketChatAPI(object):
+    settings = None
+
+    def get_private_rooms(self, **kwargs):
+        """
+        Get a listing of all private rooms with their names and IDs
+        """
+        return GetPrivateRooms(settings=self.settings, **kwargs).call(**kwargs)
+
+    def get_my_info(self, **kwargs):
+        return GetMe(settings=self.settings, **kwargs).call(**kwargs)
+
+    api = RocketChatAPI(settings={'username': 'Kevin', 'password': 'Rgwit,912',
+                              'domain': 'https://chat.rgwit.be'})
+
+    api.get_my_info()
